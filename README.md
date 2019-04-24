@@ -8,3 +8,5 @@ You can select from two levels - Novice and Professional.
 Just download the repository, and open the file sineDrill.html in your favorite browser. Have tested it on Chrome.
 
 Please report issues to me at amarnaths.codeproject@gmail.com
+
+![Image of SineDrill](https://github.com/amarnaths0005/SineDrill/blob/master/sineDrill/sineDrill.png)
