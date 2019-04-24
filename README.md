@@ -5,6 +5,8 @@ This is a program for testing your knowledge of the Sinusoid. You are presented 
 Amplitude, Frequency and Phase Shift; when you enter these values, the Blue curve gets modified. You need to match the Red and Blue Curves. 
 You can select from two levels - Novice and Professional.
 
+Inspired by the Example Matlab Program in the book "Signal Processing First" by McClellan, Schafer and Yoder
+
 Just download the repository, and open the file sineDrill.html in your favorite browser. Have tested it on Chrome.
 
 Please report issues to me at amarnaths.codeproject@gmail.com
