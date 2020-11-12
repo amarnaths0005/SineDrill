@@ -11,4 +11,4 @@ Just download the repository, and open the file sineDrill.html in your favorite 
 
 Please report issues to me at amarnaths.codeproject@gmail.com
 
-![Image of SineDrill](https://github.com/amarnaths0005/SineDrill/blob/master/sineDrill/sineDrill.png)
+![Image of SineDrill](https://github.com/amarnaths0005/SineDrill/blob/master/sineDrill.png)
