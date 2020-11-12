@@ -1,6 +1,6 @@
 (function() {
 
-    /* HTML5 - JavaScript SineDrill Code, Ver Apr 2019
+    /* HTML5 - JavaScript SineDrill Code, Ver Apr 2019, Oct 2020
     Written by Amarnath S
     amarnaths.codeproject@gmail.com    */
 
@@ -9,7 +9,7 @@
     let novicePhases = [-Math.PI/2, 0, Math.PI/2];
 
     let professionalAmplitudes = [1, 5, 10, 25, 50, 100];
-    let professionalFrequencies = [60, 100, 250, 500, 1000, 2000];
+    let professionalFrequencies = [60, 100, 250, 500, 1000, 2000]; // Multiplied by 2 pi
     let professionalPhases = [];
     let noProfessionalPhases = 61;
     let startProfessionalPhase = -30;
@@ -130,7 +130,16 @@
         let diff1 = Math.abs(correctAmplitude - guessAmplitude);
         let diff2 = Math.abs(correctFrequency - guessFrequency);
         let diff3 = Math.abs(correctPhase - guessPhase * Math.PI);
-        if( (diff1 < epsilon) && (diff2 < epsilon) && (diff3 < epsilon))
+
+        // Handle aliasing in phase
+        // Check whether diff3 is a multiple of 2 * PI.
+        // For example, if 0.5 * PI is the correct phase, then all phases 
+        //   0.5 * PI +/- (2 * PI) are also correct phases. This is why aliasing occurs.
+        let factor1 = diff3 / (2.0 * Math.PI);
+        let factor2 = Math.floor(factor1 + 0.5);
+        let diff4 = Math.abs(factor1 - factor2);
+
+        if( (diff1 < epsilon) && (diff2 < epsilon) && (diff4 < epsilon))
         {
             let msg = "Congrats! Your guess is correct! Play again - click on \"New Quiz\"";
             document.getElementById("msgCongrats").textContent = msg;
