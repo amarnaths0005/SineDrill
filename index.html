@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--
+    HTML5 - JavaScript SineDrill Code, Ver Apr 2019
+    Written by Amarnath S
+    amarnaths.codeproject@gmail.com
+  -->
+<head>
+  <meta charset="utf-8">
+  <title>SineDrill</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="sineDrill.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div> 
+            <div>
+                <h1>  SineDrill - Test your Knowledge of the Sinusoid  </h1>
+            </div>
+            <div>
+                <div class="guess">Enter Your Guess, make the Red Line disappear below the Blue Line </div>
+                <table>
+                    <tr>
+                        <td>Amplitude A =</td>
+                        <td class="inp"><input type="text" id="avalue" value="1" maxlength="10" size="10"></td>
+                        <td class="blank">Blank</td>
+                        <td>Cyclic Frequency f<sub>0</sub> =</td>
+                        <td class="inp"><input type="text" id="f_0value" value="100" maxlength="10" size="10"></td>
+                        <td class="blank">Blank</td>
+                        <td>Phase Shift &phi; =</td>
+                        <td class="inp"><input type="text" id="phivalue" value="0.25" maxlength="10" size="10"></td>
+                        <td>* &#960;</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div>
+                <output id="eqnGuess">Your Equation is:</output>
+            </div>
+
+            <div class="main">
+                <canvas id="canvasSine" width="800" height="400">
+                    Your browser does not support canvas
+                </canvas>
+            </div>
+
+            <div>
+                <table>
+                    <tr>
+                        <td class="mygraph">Question is in Red</td>
+                        <td class="blank">Blank Blank</td>
+                        <td class="guess">Your Guess is in Blue</td>               
+                    </tr>
+                </table>
+            </div>
+
+            <div>
+                <table>
+                    <tr>
+                        <td> Select User Level: </td>
+                        <td class="blank">123</td>
+                        <td> <input type="radio" name="userlevel" id="userNovice" value="novice" checked> Novice </td>
+                        <td> <input type="radio" name="userlevel" id="userPro" value="pro"> Pro </td>
+                        <td class="blank">Blank Blank Blank</td>
+                        <td><a class="showAns"id="bnNewQuiz" href="#">New Quiz</td>
+                        <td class="blank">Blank Blank</td>
+                        <td><a class="showAns" id="bnAns" href="#">Show Answer</td>
+                    </tr>
+                </table>        
+            </div>
+        </div>
+        <div class="centre"> 
+            <div class="showAns" id="msgCongrats"></div>
+        </div>
+    </div>
+</body>
+</html>
